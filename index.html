@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/responsive.css">
+
+    <!--Owl CSS-->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+
+    <title>NETFLIX CLONE</title>
+</head>
+
+<script>
+    function moreinfobutton(){
+        alert("clicou e funfou")
+        document.getElementById("Container").innerHTML = "Clicou e funfou"
+    }   
+</script>
+
+<body>
+    <header>
+        <div class="container">
+            <h2 class="logo">BOOKFLIX</h2>
+            <nav>
+                <a href=# >Inicio</a>
+                <a href=# >Séries</a>
+                <a href=# >Filmes</a>
+                <a href=# >Documentários</a>
+            </nav>
+        </div>
+    </header>    
+
+    <main>
+        <div class="filmeprincipal">
+            <div id = "container" class="container">
+                <h3 class=titulo>Eragon</h3>
+                <p class="descricao">O Reino de Alagaësia é governado pelo maligno rei Galbatorix, um antigo Cavaleiro de Dragão que traiu seu povo e seus companheiros em busca de poder. Quando Eragon, um garoto órfão que vive em uma pequena fazenda, encontra uma pedra azul, seu destino muda, pois o objeto na verdade era um ovo de dragão do último sobrevivente da raça. A dragão fêmea Saphira nasce do ovo e Eragon se torna um Cavaleiro, que luta contra o Espectro Durza e o exército de Galbatorix, cumprindo uma antiga profecia.</p>
+                <div class="botoes">
+                    <button onclick="mostrarvideo()" class="botao">
+                        <i class="fas fa-play"></i>
+                        Assistir trailer agora
+                    </button>
+                    <button onclick="trocar()" class="botao">
+                        <i class="fas fa-info-circle"></i>
+                        Mais informações
+                    </button>    
+                </div>
+            </div>
+
+            <div id="moreinfo" class="moreinfo">
+                <p id="pags" class="pags" >
+                    <i class="fas fa-book"></i>
+                    Quantidade de páginas: 370
+                </p>
+                <p id="autor"class="autor" >
+                    <i class="fas fa-male"></i>
+                    Autor: Christopher Paolinni
+                </p>
+                <p id="editora" class="editora">
+                    <i class="fas fa-store"></i>
+                    Editora: Rocco
+                </p>
+                <p id="duracao" class="duracao">
+                    <i class="fas fa-ticket-alt"></i>
+                    Duração: 1h 44min
+                </p>
+                <p id="diretor" class="diretor">
+                    <i class="fas fa-male"></i>
+                    Diretor: Stefen Fangmeier
+                </p>
+                <button onclick="voltar(mi)" class="botao">
+                    Retornar
+                </button>
+            </div>
+        </div>
+
+        <div id="video" class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dZRHO0d9Nao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button onclick="voltar(video)" class="botao">
+                Retornar
+            </button>
+        </div>
+    </main>
+
+    <script>
+        var mi = document.getElementById("moreinfo");
+        var ct = document.getElementById("container");
+        var video = document.getElementById("video");
+        var pg = document.getElementById("pags");
+        var aut = document.getElementById("autor");
+        var edit = document.getElementById("editora");
+        var dur = document.getElementById("duracao");
+        var dir = document.getElementById("diretor");
+
+        function trocar(){
+            ct.style["display"] = "none";
+            mi.style["display"] = "flex";
+            mi.style['flex-direction'] = "column";
+            mi.style['justify-content'] = "left"
+            pg.style['padding'] = "15px";
+            aut.style['padding'] = "15px";
+            edit.style['padding'] = "15px";
+            dur.style['padding'] = "15px";
+            dir.style['padding'] = "15px";
+        }
+
+        function voltar(id){
+            id.style["display"] = "none";
+            ct.style["display"] = "flex";
+            ct.style["flex-direction"] = "column";
+        }
+
+        function mostrarvideo(){
+            ct.style["display"] = "none";
+            video.style["display"] = "flex";
+            video.style["margin-left"] = "30%";
+            }
+
+</script>
+
+    <div class="carrosel-filmes">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="box-filme" src="img/artemis.jpg" alt="" class="src">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/enola.jpg" alt="" class="src">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/forrest.jpg" alt="" class="src">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/hobbit1.jpg" alt="" class="src">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/hobbit2.jpg" alt="" class="src">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/hobbit3.jpg" alt="" class="src">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/irlandês.jpg" alt="" class="src">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/marley.jpg" alt="" class="src">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/midnight sun.jpg" alt="" class="src">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/sherlock1.jpg" alt="" class="src">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/sherlock2.jpg" alt="" class="src">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/um homem de sorte.jpg" alt="" class="src">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/f4fb8eaa24.js" crossorigin="anonymous"></script>
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/setup.js"></script>
+
+
+</body>
+</html>
